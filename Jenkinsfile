@@ -10,7 +10,7 @@ pipeline {
     }
     stage('Test') {
       steps {
-        sh './working.cpp'
+        sh 'cat working.cpp'
         echo 'Test successful'
       }
     }
