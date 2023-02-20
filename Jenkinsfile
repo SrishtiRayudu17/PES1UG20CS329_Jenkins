@@ -3,14 +3,14 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'g++ working.cpp -o working'
-          build job: 'PES1UG20CS329-1', wait: false
+        sh 'g++ -c working.cpp'
+        sh 'g++ -o working working.cpp'
           echo 'Build successful'
       }
     }
     stage('Test') {
       steps {
-        sh 'cat working.cpp'
+        sh './working.cpp'
         echo 'Test successful'
       }
     }
