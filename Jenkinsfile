@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'g++ -c working.cpp -error'
+        sh 'g++ -c working.cpp - error'
         sh 'g++ -o working working.cpp'
           echo 'Build successful'
       }
